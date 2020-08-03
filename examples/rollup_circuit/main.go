@@ -15,7 +15,7 @@ limitations under the License.
 */
 
 // Package gnark is a framework to execute (and verify) algorithms in zero-knowledge
-package main
+package setup
 
 import "github.com/consensys/gnark/cmd"
 
