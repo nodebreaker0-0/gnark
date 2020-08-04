@@ -19,8 +19,8 @@ package main
 import (
 	"encoding/binary"
 
+	"github.com/consensys/gurvy/bn256/fr"
 	eddsa "github.com/nodebreaker0-0/gnark/crypto/signature/eddsa/bn256"
-	"github.com/nodebreaker0-0/gurvy/bn256/fr"
 )
 
 var (

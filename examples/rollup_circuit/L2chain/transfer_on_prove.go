@@ -6,11 +6,11 @@ import (
 	"path/filepath"
 	"time"
 
+	"github.com/consensys/gurvy"
 	backend_bn256 "github.com/nodebreaker0-0/gnark/backend/bn256"
 	groth16_bn256 "github.com/nodebreaker0-0/gnark/backend/bn256/groth16"
 	"github.com/nodebreaker0-0/gnark/encoding/gob"
 	"github.com/nodebreaker0-0/gnark/frontend"
-	"github.com/nodebreaker0-0/gurvy"
 )
 
 var (
