@@ -22,12 +22,12 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/consensys/gnark/backend"
-	groth16_bls377 "github.com/consensys/gnark/backend/bls377/groth16"
-	groth16_bls381 "github.com/consensys/gnark/backend/bls381/groth16"
-	groth16_bn256 "github.com/consensys/gnark/backend/bn256/groth16"
-	"github.com/consensys/gnark/encoding/gob"
-	"github.com/consensys/gurvy"
+	"github.com/nodebreaker0-0/gnark/backend"
+	groth16_bls377 "github.com/nodebreaker0-0/gnark/backend/bls377/groth16"
+	groth16_bls381 "github.com/nodebreaker0-0/gnark/backend/bls381/groth16"
+	groth16_bn256 "github.com/nodebreaker0-0/gnark/backend/bn256/groth16"
+	"github.com/nodebreaker0-0/gnark/encoding/gob"
+	"github.com/nodebreaker0-0/gurvy"
 	"github.com/spf13/cobra"
 )
 

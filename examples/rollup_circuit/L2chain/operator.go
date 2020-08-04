@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package L2chain
+package main
 
 import (
 	"bytes"
@@ -22,9 +22,9 @@ import (
 	"math/big"
 	"strconv"
 
-	"github.com/consensys/gnark/backend"
-	"github.com/consensys/gnark/crypto/accumulator/merkletree"
-	"github.com/consensys/gnark/gadgets/accumulator/merkle"
+	"github.com/nodebreaker0-0/gnark/backend"
+	"github.com/nodebreaker0-0/gnark/crypto/accumulator/merkletree"
+	"github.com/nodebreaker0-0/gnark/gadgets/accumulator/merkle"
 )
 
 var (

@@ -14,15 +14,15 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package L2chain
+package main
 
 import (
 	"hash"
 	"testing"
 
-	mimc "github.com/consensys/gnark/crypto/hash/mimc/bn256"
-	eddsa "github.com/consensys/gnark/crypto/signature/eddsa/bn256"
-	"github.com/consensys/gurvy/bn256/fr"
+	mimc "github.com/nodebreaker0-0/gnark/crypto/hash/mimc/bn256"
+	eddsa "github.com/nodebreaker0-0/gnark/crypto/signature/eddsa/bn256"
+	"github.com/nodebreaker0-0/gurvy/bn256/fr"
 )
 
 func createAccount(i int, h hash.Hash) (Account, eddsa.PrivateKey) {

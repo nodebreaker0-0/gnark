@@ -1,4 +1,4 @@
-package L2chain
+package main
 
 import (
 	"fmt"
@@ -6,14 +6,18 @@ import (
 	"path/filepath"
 	"time"
 
-	backend_bn256 "github.com/consensys/gnark/backend/bn256"
-	groth16_bn256 "github.com/consensys/gnark/backend/bn256/groth16"
-	"github.com/consensys/gnark/encoding/gob"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gurvy"
+	backend_bn256 "github.com/nodebreaker0-0/gnark/backend/bn256"
+	groth16_bn256 "github.com/nodebreaker0-0/gnark/backend/bn256/groth16"
+	"github.com/nodebreaker0-0/gnark/encoding/gob"
+	"github.com/nodebreaker0-0/gnark/frontend"
+	"github.com/nodebreaker0-0/gurvy"
 )
 
-func transfer_on_prove() {
+var (
+	fCount uint
+)
+
+func main() {
 
 	nbAccounts := 16 // 16 accounts so we know that the proof length is 5
 
@@ -34,6 +38,14 @@ func transfer_on_prove() {
 
 	// update the state from the received transfer
 	err = operator.updateState(transfer, 0)
+
+	fCount = 1
+	fProofPath := filepath.Clean("../")
+	fPkPath := filepath.Clean("../circuit.pk")
+	circuitPath := filepath.Clean("../circuit.r1cs")
+	circuitName := filepath.Base(circuitPath)
+	circuitExt := filepath.Ext(circuitName)
+	circuitName = circuitName[0 : len(circuitName)-len(circuitExt)]
 
 	var bigIntR1cs frontend.R1CS
 	if err := gob.Read(circuitPath, &bigIntR1cs, gurvy.BN256); err != nil {
@@ -59,7 +71,7 @@ func transfer_on_prove() {
 		fmt.Println("can't parse input", err)
 		os.Exit(-1)
 	}
-	fmt.Printf("%-30s %-30s %-d inputs\n", "loaded input", operator.witnesses, len(operator.witnesses))
+	//fmt.Printf("%-30s %-30s %-d inputs\n", "loaded input", operator.witnesses, len(operator.witnesses))
 
 	// compute proof
 	start := time.Now()

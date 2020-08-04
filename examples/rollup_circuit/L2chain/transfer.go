@@ -14,13 +14,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package L2chain
+package main
 
 import (
 	"hash"
 
-	eddsa "github.com/consensys/gnark/crypto/signature/eddsa/bn256"
-	"github.com/consensys/gurvy/bn256/fr"
+	eddsa "github.com/nodebreaker0-0/gnark/crypto/signature/eddsa/bn256"
+	"github.com/nodebreaker0-0/gurvy/bn256/fr"
 )
 
 // Transfer describe a rollup transfer
