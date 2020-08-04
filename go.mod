@@ -1,9 +1,10 @@
-module github.com/consensys/gnark
+module github.com/nodebreaker0-0/gnark
 
 go 1.14
 
 require (
 	github.com/consensys/bavard v0.1.2-0.20200424125854-c0225aa55321
+	github.com/consensys/gnark v0.2.1-alpha
 	github.com/consensys/gurvy v0.1.2-0.20200512111154-1662e289e29b
 	github.com/pkg/profile v1.4.0
 	github.com/spf13/cobra v1.0.0
