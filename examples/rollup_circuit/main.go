@@ -17,7 +17,7 @@ limitations under the License.
 // Package gnark is a framework to execute (and verify) algorithms in zero-knowledge
 package setup
 
-import "github.com/consensys/gnark/cmd"
+import "github.com/nodebreaker0-0/gnark/examples/rollup_circuit"
 
 func main() {
 	cmd.Execute()
